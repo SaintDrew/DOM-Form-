@@ -11,7 +11,7 @@
 
 var from = document.getElementById('addForm')
 var itemList = document.getElementById('items')
-var filter = document.getElementById('filter')
+// var filter = document.getElementById('filter')
 
 // Form Submit event
 form.addEventListener('submit', addItem);
@@ -21,12 +21,11 @@ form.addEventListener('submit', addItem);
 // filter.addEventListener('keyup', filterItems)
 
 // Add Item
-function addItem(e) {
-    e.preventDefault();
-}
+function addItem(e){
+    e.prevntDefault();
 
 // Get Input value 
-var newItem = document.getElementById('item');
+var newItem = document.getElementById('item').value;
 
 // Create new li element 
 var li = document.createElement('li');
@@ -36,6 +35,8 @@ li.className = 'list-group-item';
 
 // Add text node with input value
 li.appendChild(document.createTextNode(newItem));
+
+itemList.appendChild(li);
 
 // // Create del button element
 // var deleteBtn = document.createElement('button');
@@ -51,6 +52,7 @@ li.appendChild(document.createTextNode(newItem));
 // // Append li to list 
 // li.appendChild(deleteBtn); 
 
+}
 
 
 
