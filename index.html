@@ -1,60 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="../SBA/index.js"></script>
-    <link rel="stylesheet" href="../SBA/style.css">
-    <title>DOM SBA Form</title>
-</head>
-
-<body>
+<header id="main-header" class="bg-success text-white p-4 mb-3">
     <div class="container">
-        <form id="Form1">
-            <h3>Create Account</h3>
-            <input type="text" placeholder="Email" required>
-            <input type="password" placeholder="password" required>
-            <input type="password" placeholder="Confirm Password" required>
-
-            <div class="btn-box">
-                <button type="button" id ="Next1">Next</button>
+        <div class="row">
+            <div class="col-md-6">
+                <h1 id="header-title">The Best Sports Player</h1>
             </div>
-        </form>
-
-        <form id="Form2">
-            <h3>Social Links</h3>
-            <input type="text" placeholder="Medium">
-            <input type="text" placeholder="Github">
-            <input type="text" placeholder="LinkedIn">
-
-            <div class="btn-box">
-                <button type="button" id="Back1">Back</button>
-                <button type="button" id ="Next2">Next</button>
+            <div class="col-md-6 align-self-center">
+                <input type="text" class="form-control" id="filter" placeholder="Search Items...">
             </div>
-        </form>
-
-        <form id="Form3">
-            <h3>Personal Info </h3>
-            <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Last Name" required>
-            <input type="text" placeholder="Phone Number" required>
-
-            <div class="btn-box">
-                <button type="button" id="Back2">Back</button>
-                <button type="Submit">Submit</button>
-            </div>
-        </form>
-
-        <dvi class="step-row">
-        <div id="progress"></div>
-            <div class="step-col"><small>Step 1</small></div>
-            <div class="step-col"><small>Step 2</small></div>
-            <div class="step-col"><small>Step 3</small></div>
-        </dvi>
-
+        </div>
     </div>
-
-</body>
-
-</html>
+</header>
+<div class="container">
+    <div id="main" class="card card-body">
+        <h2 class="title">Add Athletes</h2>
+        <form id="addForm" class="form-inline mb-3">
+            <input type="text" class="form-control mr-2" id="item">
+            <input type="submit" class="btn btn-dark" value="Submit">
+        </form>
+        <h2 class="title">Options</h2>
+        <ul id="items" class="list-group">
+            <li class="list-group-item"> Michael Jordan <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+            <li class="list-group-item"> Serena Williams <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+            <li class="list-group-item"> Tiger Woods <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+            <li class="list-group-item"> Tom Brady <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+        </ul>
+    </div>
+</div>
