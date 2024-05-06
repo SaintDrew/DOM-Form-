@@ -55,33 +55,70 @@
 var Form1 = document.getElementById("Form1");
 var Form2 = document.getElementById("Form2");
 var Form3 = document.getElementById("Form3");
+function add() {
+    var newField = document.createElement('input');
+    newField.setAttribute('type', 'text');
+    newField.setAttribute('name', 'text');
+    newField.setAttribute('class', 'text');
+    newField.setAttribute('siz', 50);
+    newField.setAttribute('placeholder', 'Optional Field');
+    Form3.appendChild(newField);
+}
 
-var Next1 =document.getElementById("Next1");
-var Next2 =document.getElementById("Next2");
-var Back1 =document.getElementById("Back1");
-var Back2 =document.getElementById("Back2");
+function remove() {
+    var input_tags = formfield.getElementsByTagName('input');
+    if (input_tags.length > 2) {
+        formfield.removeChild(input_tags[(input_tags.length) - 1]);
+    }
+}
 
-var progress =document.getElementById("progress");
+var Next1 = document.getElementById("Next1");
+var Next2 = document.getElementById("Next2");
+var Back1 = document.getElementById("Back1");
+var Back2 = document.getElementById("Back2");
 
-Next1.onclick = function(){
+var progress = document.getElementById("progress");
+
+Next1.onclick = function () {
     Form1.style.left = "-450px"
     Form2.style.left = "40px";
     progress.style.width = "240px";
 }
-Back1.onclick = function(){
+Back1.onclick = function () {
     Form1.style.left = "40px"
     Form2.style.left = "450px";
     progress.style.width = "120px"
 }
-Next2.onclick = function(){
+Next2.onclick = function () {
     Form2.style.left = "-450px"
     Form3.style.left = "40px";
     progress.style.width = "360px"
 }
-Back2.onclick = function(){
+Back2.onclick = function () {
     Form2.style.left = "40px"
     Form3.style.left = "450px";
     progress.style.width = "240px"
 }
 
+// Form Submit event
+form.addEventListener('submit', addItem);
+
+// Add item
+function addItem(e) {
+    e.preventDefault();
+
+    // Get Input value 
+    var newItem = document.getElementById('item').value;
+
+    // Create new li element 
+    var li = document.createElement('li');
+    // Add class 
+    li.className = 'list-group-item';
+    // Add text node with input value
+    li.appendChild(document.createTextNode(newItem));
+}
+// // Delete event
+// itemList.addEventListener('click', removeItem)
+// // Filter event
+// // filter.addEventListener('keyup', filterItems)
 
