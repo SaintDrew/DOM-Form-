@@ -1,13 +1,13 @@
 // TRAVERSING THE DOM // 
-var itemList = document.querySelector('#items');
+// var itemList = document.querySelector('#items');
 
 
-var button = document.getElementById('button')
-var box = document.getElementById('box')
+// var button = document.getElementById('button')
+// var box = document.getElementById('box')
 
-var itemInput = document.querySelector('input[type="text"');
-var form = document.querySelector('form');
-var select = document.querySelector('select'); 
+// var itemInput = document.querySelector('input[type="text"');
+// var form = document.querySelector('form');
+// var select = document.querySelector('select'); 
 
 var from = document.getElementById('addForm')
 var itemList = document.getElementById('items')
@@ -16,24 +16,26 @@ var filter = document.getElementById('filter')
 // Form Submit event
 form.addEventListener('submit', addItem);
 // Delete event
-itemList.addEventListener('click', removeItem)
+// itemList.addEventListener('click', removeItem)
 // Filter event
 // filter.addEventListener('keyup', filterItems)
 
 // Add Item
 function addItem(e) {
-    e.preventDefault()
+    e.preventDefault();
 }
 
 // Get Input value 
-var newItem = document.getElementById('item').value;
+var newItem = document.getElementById('item');
 
-// // Create new li element 
-// var li = document.createElement('li');
-// // Add class 
-// li.className = 'list-group-item';
-// // Add text node with input value
-// li.appendChild(document.createTextNode(newItem));
+// Create new li element 
+var li = document.createElement('li');
+// Add class 
+li.className = 'list-group-item';
+// console.log(li);
+
+// Add text node with input value
+li.appendChild(document.createTextNode(newItem));
 
 // // Create del button element
 // var deleteBtn = document.createElement('button');
