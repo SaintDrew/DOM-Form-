@@ -98,8 +98,17 @@ console.log(123);
 });
 
 // addEventListener
-function buttonClick(){
-    console.log('Button clicked')
+
+// function buttonClick(){
+//     console.log('Button clicked')
+//}
+
+body.addEventListener('mousemove', runEvent);
+
+function runEvent(e){
+    console.log(`EVENT TYPE: `+e.type);
+    document.body.style.backgroundColor = "rgb("+e.offsetX+","
+    +e.offsetY+", 40)";
 }
 
 // var button = document.getElementById('button')
