@@ -65,12 +65,13 @@ var even = document.querySelectorAll('li:nth-child(even)');
 for(var i = 0; i < even.length; i++){
 even[i].style.backgroundColor = '#ccc';
 }
-////////////////////////////////////////////////
 
 
 // TRAVERSING THE DOM // 
-// var itemList = document.querySelector('#items');
-
+var itemList = document.querySelector('#items');
+// parentNode
+console.log(itemList.parentNode);
+itemList.parentNode.style.backgroundColor = '#c1cce0';
 
 // var button = document.getElementById('button')
 // var box = document.getElementById('box')
