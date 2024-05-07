@@ -1,3 +1,17 @@
+// Examine tHe document object 
+console.log(document.title);
+
+///////////////////////////////
+// GETELEMENTBYID
+// console.log(document.getElementById('header-title'));
+var headerTitle = document.getElementById('header-title');
+// console.log(headerTitle);
+// headerTitle.innerText = 'The GOAT';
+// headerTitle.innerHTML = '<h3>Legends</h3>'
+headerTitle.style.borderBottom = 'solid 3px #000';
+////////////////////////////////////////////////
+
+
 // TRAVERSING THE DOM // 
 // var itemList = document.querySelector('#items');
 
@@ -9,34 +23,34 @@
 // var form = document.querySelector('form');
 // var select = document.querySelector('select'); 
 
-var from = document.getElementById('addForm')
-var itemList = document.getElementById('items')
-// var filter = document.getElementById('filter')
+// var from = document.getElementById('addForm')
+// var itemList = document.getElementById('items')
+// // var filter = document.getElementById('filter')
 
-// Form Submit event
-form.addEventListener('submit', addItem);
+// // Form Submit event
+// form.addEventListener('submit', addItem);
 // Delete event
 // itemList.addEventListener('click', removeItem)
 // Filter event
 // filter.addEventListener('keyup', filterItems)
 
 // Add Item
-function addItem(e){
-    e.prevntDefault();
+// function addItem(e){
+//     e.prevntDefault();
 
-// Get Input value 
-var newItem = document.getElementById('item').value;
+// // Get Input value 
+// var newItem = document.getElementById('item').value;
 
-// Create new li element 
-var li = document.createElement('li');
-// Add class 
-li.className = 'list-group-item';
-// console.log(li);
+// // Create new li element 
+// var li = document.createElement('li');
+// // Add class 
+// li.className = 'list-group-item';
+// // console.log(li);
 
-// Add text node with input value
-li.appendChild(document.createTextNode(newItem));
+// // Add text node with input value
+// li.appendChild(document.createTextNode(newItem));
 
-itemList.appendChild(li);
+// itemList.appendChild(li);
 
 // // Create del button element
 // var deleteBtn = document.createElement('button');
@@ -52,7 +66,4 @@ itemList.appendChild(li);
 // // Append li to list 
 // li.appendChild(deleteBtn); 
 
-}
-
-
-
+// }
