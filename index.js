@@ -77,7 +77,12 @@ console.log(itemList.parentNode.parentNode.parentNode);
 // childNodes //
 console.log(itemList.childNodes);
 console.log(itemList.children);
-itemList.children[2].style.backgroundColor = '#2691d9'
+// itemList.children[2].style.backgroundColor = '#2691d9'
+
+// previousElementSibling
+console.log(itemList.previousElementSibling);
+itemList.previousElementSibling.style.color = 'green';
+
 // var button = document.getElementById('button')
 // var box = document.getElementById('box')
 
