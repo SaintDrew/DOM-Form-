@@ -92,6 +92,10 @@ console.log(newDiv)
 // Add class
 newDiv.className = 'Legends'
 
+// addEventListener
+function buttonClick(){
+    console.log('Button clicked')
+}
 
 // var button = document.getElementById('button')
 // var box = document.getElementById('box')
