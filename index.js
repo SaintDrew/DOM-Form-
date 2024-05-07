@@ -51,7 +51,20 @@ var lastItem = document.querySelector
 lastItem.style.color = 'blue';
 
 var secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.color = 'green'
+secondItem.style.color = 'coral'
+
+
+// QUERYSELECTORALL// 
+var titles = document.querySelectorAll('.title')
+
+console.log(titles);
+titles[0].textContent = 'Player';
+
+var even = document.querySelectorAll('li:nth-child(even)');
+
+for(var i = 0; i < even.length; i++){
+even[i].style.backgroundColor = '#ccc';
+}
 ////////////////////////////////////////////////
 
 
