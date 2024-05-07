@@ -67,12 +67,17 @@ even[i].style.backgroundColor = '#ccc';
 }
 
 
-// TRAVERSING THE DOM // 
 var itemList = document.querySelector('#items');
-// parentNode
+// parentNode //
 console.log(itemList.parentNode);
 itemList.parentNode.style.backgroundColor = '#c1cce0';
 
+console.log(itemList.parentNode.parentNode.parentNode);
+
+// childNodes //
+console.log(itemList.childNodes);
+console.log(itemList.children);
+itemList.children[2].style.backgroundColor = '#2691d9'
 // var button = document.getElementById('button')
 // var box = document.getElementById('box')
 
