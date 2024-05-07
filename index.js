@@ -83,6 +83,16 @@ console.log(itemList.children);
 console.log(itemList.previousElementSibling);
 itemList.previousElementSibling.style.color = 'green';
 
+// createElement
+
+// Create a div 
+var newDiv = document.createElement('div');
+console.log(newDiv)
+
+// Add class
+newDiv.className = 'Legends'
+
+
 // var button = document.getElementById('button')
 // var box = document.getElementById('box')
 
