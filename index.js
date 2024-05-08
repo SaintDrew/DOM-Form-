@@ -109,13 +109,39 @@ function runEvent(e){
     console.log(`EVENT TYPE: `+e.type);
     document.body.style.backgroundColor = "rgb("+e.offsetX+","
     +e.offsetY+", 40)";
-}
+// }
 
 // var button = document.getElementById('button')
 // var box = document.getElementById('box')
 
-// var itemInput = document.querySelector('input[type="text"');
-// var form = document.querySelector('form');
+var itemInput = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+
+itemInput.addEventListener('keydown', runEvent);
+
+// Addding to Form with EventListener
+var form = document.getElementById('addForm');
+var itemList = document.getElementById('items');
+
+// From submit event
+form.addEventListener('SEND', addItem);
+
+// Add Item
+function addItem(e){
+    e.preventDefault();
+
+    // Get Input value
+    var newItem = document.getElementById('item');
+
+    // Create new li element
+    var li = document.createElement('li');
+    
+    // Add text node with input value
+    li.appendChild(document.createTextNode(newItem));
+
+    itemList.appendChild(li);
+}
+
 // var select = document.querySelector('select'); 
 
 // var from = document.getElementById('addForm')
@@ -161,4 +187,4 @@ function runEvent(e){
 // // Append li to list 
 // li.appendChild(deleteBtn); 
 
-// }
+}
