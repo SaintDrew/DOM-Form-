@@ -20,7 +20,7 @@ items[1].textContent = 'Kobe Bryant';
 items[1].style.fontWeight = 'bold';
 // items[1].style.backgroundColor = 'yellow';
 
-for(var i = 0; i < items.length; i++){
+for (var i = 0; i < items.length; i++) {
     items[i].style.backgroundColor = '#f4f4f4';
 }
 
@@ -32,22 +32,20 @@ li[0].textContent = 'Roger Federer';
 li[0].style.fontWeight = 'bold';
 // items[1].style.backgroundColor = 'yellow';
 
-for(var i = 0; i < li.length; i++){
+for (var i = 0; i < li.length; i++) {
     li[i].style.backgroundColor = '#f4f4f4';
 }
 
 // QUERYSELECTOR // 
-var input = document.querySelector('input');
-input.value = 'Hello World'
 
-var submit = document.querySelector('input[type="submit"]');
-submit.value="SEND";
+// var submit = document.querySelector('input[type="submit"]');
+// submit.value="SEND";
 
 var item = document.querySelector('.list-group-item');
 item.style.color = 'red';
 
 var lastItem = document.querySelector
-('.list-group-item:last-child');
+    ('.list-group-item:last-child');
 lastItem.style.color = 'blue';
 
 var secondItem = document.querySelector('.list-group-item:nth-child(2)');
@@ -62,8 +60,8 @@ titles[0].textContent = 'Player';
 
 var even = document.querySelectorAll('li:nth-child(even)');
 
-for(var i = 0; i < even.length; i++){
-even[i].style.backgroundColor = '#ccc';
+for (var i = 0; i < even.length; i++) {
+    even[i].style.backgroundColor = '#ccc';
 }
 
 
@@ -93,9 +91,9 @@ console.log(newDiv)
 newDiv.className = 'Legends'
 
 var button = document.getElementById('button').addEventListener
-('click', function(){
-console.log(123);
-});
+    ('click', function () {
+        console.log(123);
+    });
 
 // addEventListener
 
@@ -105,86 +103,45 @@ console.log(123);
 
 body.addEventListener('mousemove', runEvent);
 
-function runEvent(e){
-    console.log(`EVENT TYPE: `+e.type);
-    document.body.style.backgroundColor = "rgb("+e.offsetX+","
-    +e.offsetY+", 40)";
-// }
+function runEvent(e) {
+    console.log(`EVENT TYPE: ` + e.type);
+    document.body.style.backgroundColor = "rgb(" + e.offsetX + ","
+        + e.offsetY + ", 40)";
+    // }
 
-// var button = document.getElementById('button')
-// var box = document.getElementById('box')
+    // var button = document.getElementById('button')
+    // var box = document.getElementById('box')
 
-var itemInput = document.querySelector('input[type="text"]');
-var form = document.querySelector('form');
+    var itemInput = document.querySelector('input[type="text"]');
+    // var form = document.querySelector('form');
 
-itemInput.addEventListener('keydown', runEvent);
+    // itemInput.addEventListener('keydown', runEvent);
 
-// Addding to Form with EventListener
-var form = document.getElementById('addForm');
-var itemList = document.getElementById('items');
+    // Addding to Form with EventListener
+    var form = document.getElementById('addForm');
+    var itemList = document.getElementById('items');
 
-// From submit event
-form.addEventListener('SEND', addItem);
+    // From submit event
+    form.addEventListener('submit', addItem);
 
-// Add Item
-function addItem(e){
-    e.preventDefault();
+    // Add Item
+    function addItem(e) {
+        e.preventDefault();
 
-    // Get Input value
-    var newItem = document.getElementById('item');
+        // Get Input value
+        var newItem = document.getElementById('item').value;
 
-    // Create new li element
-    var li = document.createElement('li');
-    
-    // Add text node with input value
-    li.appendChild(document.createTextNode(newItem));
+        // Create new li element
+        var li = document.createElement('li');
 
-    itemList.appendChild(li);
-}
+        // Add class
+        li.className = 'list-group-item';
 
-// var select = document.querySelector('select'); 
+        // Add text node with input value
+        li.appendChild(document.createTextNode(newItem));
 
-// var from = document.getElementById('addForm')
-// var itemList = document.getElementById('items')
-// // var filter = document.getElementById('filter')
+        itemList.appendChild(li);
+    }
 
-// // Form Submit event
-// form.addEventListener('submit', addItem);
-// Delete event
-// itemList.addEventListener('click', removeItem)
-// Filter event
-// filter.addEventListener('keyup', filterItems)
-
-// Add Item
-// function addItem(e){
-//     e.prevntDefault();
-
-// // Get Input value 
-// var newItem = document.getElementById('item').value;
-
-// // Create new li element 
-// var li = document.createElement('li');
-// // Add class 
-// li.className = 'list-group-item';
-// // console.log(li);
-
-// // Add text node with input value
-// li.appendChild(document.createTextNode(newItem));
-
-// itemList.appendChild(li);
-
-// // Create del button element
-// var deleteBtn = document.createElement('button');
-
-// // Add classes to del button
-// deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
-// // Append text node 
-// deleteBtn.appendChild(document.createTextNode('X'));
-
-// // Append button to li
-// li.appendChild(deleteBtn);
-
-// // Append li to list 
-// li.appendChild(deleteBtn); 
 
 }
